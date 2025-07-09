@@ -1,6 +1,6 @@
 // src/pages/Upload.jsx
 import React, { useState, useRef } from 'react';
-import axios from 'axios';
+import api from '../api.js';
 import { AppCtx } from '../context.jsx';
 import { useNavigate } from 'react-router-dom';
 
@@ -51,7 +51,7 @@ export default function Upload() {
     form.append('file', file);
 
     try {
-      const { data } = await axios.post('http://localhost:4000/api/upload', form);
+      const { data } = await api.post('/upload', form);
       // data = { company, name, title, email, phone, rawText }
       setCardData({ ...data, file: file });
       navigate('/card-review');
