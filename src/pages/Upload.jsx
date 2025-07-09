@@ -276,25 +276,11 @@ export default function Upload() {
               {/* 操作按鈕 */}
               <div className="space-y-3">
                 <button
-                  onClick={startCamera}
+                  onClick={handleUploadClick}
                   disabled={loading}
                   className="w-full py-3 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-300 disabled:text-gray-500"
                 >
-                  📸 開啟相機拍攝
-                </button>
-                
-                <div className="flex items-center">
-                  <div className="flex-1 h-px bg-gray-300"></div>
-                  <span className="px-3 text-gray-500 text-sm">或</span>
-                  <div className="flex-1 h-px bg-gray-300"></div>
-                </div>
-                
-                <button
-                  onClick={handleUploadClick}
-                  disabled={loading}
-                  className="w-full py-3 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors disabled:bg-gray-300 disabled:text-gray-500"
-                >
-                  📁 從相簿選擇
+                  📁 上傳名片照
                 </button>
               </div>
               
